@@ -1,0 +1,23 @@
+appId: com.example.app
+clearState: true
+---
+- openLink: exp://192.168.0.33:8081
+- tapOn:
+    text: "Username"
+    index: 1
+# enter random email
+- inputRandomEmail
+# tap on username
+- tapOn:
+    text: "Password"
+    index: 1
+# enter username
+- inputRandomPersonName
+# hide keyboard
+- hideKeyboard
+# tap on sign in
+- tapOn: "Sign in"
+# alternative: tap on sign in (does the same)
+- tapOn:
+    text: "Sign in"
+- assertVisible: "Sign in successfully"
